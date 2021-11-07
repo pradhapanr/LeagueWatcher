@@ -1,5 +1,4 @@
-from typing import ClassVar
-from champion_rotation import Champion
+from apis.league_of_legends.champion_rotation import Champion
 
 
 class LeagueWatcher:
