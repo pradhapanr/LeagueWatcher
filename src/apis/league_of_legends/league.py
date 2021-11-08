@@ -33,7 +33,9 @@ class League(Endpoint):
         queue_type = self._check_queue_type(queue)
         tier_name = self._check_tier(tier)
         division_str = self._check_division(division)
-        url = 'https://{region}.api.riotgames.com/lol/league/v4/entries/{queue_type}/{tier_name}/III?api_key=RGAPI-2cb083ad-c541-4431-a448-542dac697e80'
+        url = 'https://{region}.api.riotgames.com/lol/league/v4/entries/{queue_type}/{tier_name}/{division}?api_key={api_key}'.format(
+            region=region, queue_type=queue_type, tier_name=tier_name, division=division_str, api_key=self._api_key)
+        return self.make_request(url)
 
     def _check_queue_type(self, queue: str) -> str:
         queue_name = queue.lower()
