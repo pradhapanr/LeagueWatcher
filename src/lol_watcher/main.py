@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 import pprint
 
-from league_watcher import LeagueWatcher
+from .league_watcher import LeagueWatcher
 
 
 def main():

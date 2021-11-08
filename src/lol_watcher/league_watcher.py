@@ -1,6 +1,6 @@
-from apis.league_of_legends.champion_rotation import Champion
-from apis.league_of_legends.summoner import Summoner
-from apis.league_of_legends.league import League
+from src.lol_watcher.apis.league_of_legends.champion_rotation import Champion
+from src.lol_watcher.apis.league_of_legends.summoner import Summoner
+from src.lol_watcher.apis.league_of_legends.league import League
 
 
 class LeagueWatcher:

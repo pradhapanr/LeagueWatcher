@@ -1,7 +1,7 @@
 import unittest
 import responses
 import requests
-#from src.apis.league_of_legends.summoner import Summoner
+from src.lol_watcher.apis.league_of_legends.summoner import Summoner
 
 
 class TestSummonerAPI(unittest.TestCase):
