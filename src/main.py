@@ -16,7 +16,8 @@ def main():
     champ_rotation = league_watcher.champion.rotation('na1')
     pp.pprint(champ_rotation)
 
-    chall_queue = league_watcher.league.challenger_list('na1', 'rankedasdas')
+    chall_queue = league_watcher.league.challenger_list(
+        'na1', 'ranked')
     pp.pprint(chall_queue)
 
 
