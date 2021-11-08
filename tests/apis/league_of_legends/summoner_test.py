@@ -1,6 +1,15 @@
 import unittest
+import responses
+import requests
+#from src.apis.league_of_legends.summoner import Summoner
 
 
 class TestSummonerAPI(unittest.TestCase):
-    def test_rotation(self):
-        self.assertAlmostEqual(1, 1)
+    @responses.activate
+    def test_by_summoner_name(self):
+        responses.add(responses.GET, 'http://blabla.com/api/1',
+                      json={'foo': 'bar'}, status=200)
+
+        res = requests.get('http://blabla.com/api/1')
+
+        assert res.json() == {'foo': 'bar'}
