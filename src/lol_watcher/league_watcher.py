@@ -1,6 +1,7 @@
 from src.lol_watcher.apis.league_of_legends.champion_rotation import Champion
 from src.lol_watcher.apis.league_of_legends.summoner import Summoner
 from src.lol_watcher.apis.league_of_legends.league import League
+from src.lol_watcher.apis.league_of_legends.match import Match
 
 
 class LeagueWatcher:
@@ -12,6 +13,7 @@ class LeagueWatcher:
         self._champion = Champion(api_key)
         self._summoner = Summoner(api_key)
         self._league = League(api_key)
+        self._match = Match(api_key)
 
     @property
     def champion(self) -> Champion:
@@ -24,3 +26,7 @@ class LeagueWatcher:
     @property
     def league(self) -> League:
         return self._league
+
+    @property
+    def match(self) -> Match:
+        return self._match

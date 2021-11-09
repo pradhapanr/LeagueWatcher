@@ -1,4 +1,4 @@
-from ..endpoint import Endpoint
+from src.lol_watcher.apis.endpoint import Endpoint
 
 
 class Champion(Endpoint):

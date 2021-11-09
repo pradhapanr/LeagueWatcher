@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 import pprint
 
-from .league_watcher import LeagueWatcher
+from src.lol_watcher.league_watcher import LeagueWatcher
 
 
 def main():
@@ -13,12 +13,8 @@ def main():
 
     league_watcher = LeagueWatcher(api_key=token)
 
-    champ_rotation = league_watcher.champion.rotation('na1')
-    pp.pprint(champ_rotation)
-
-    chall_queue = league_watcher.league.challenger_list(
-        'na1', 'ranked')
-    pp.pprint(chall_queue)
+    match = league_watcher.match.matchlist_by_puuid('na1', 'blah')
+    print(match)
 
 
 if __name__ == '__main__':
